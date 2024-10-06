@@ -10,7 +10,7 @@
   ],
   "host_permissions": [
     "<all_urls>",
-    "https://your-repl-url.repl.co/*"  // Replace with your Replit URL
+    "https://7907ebc7-588d-4842-997e-6ffd8a504f9b-00-2ztv2wnvxa3bt.kirk.replit.dev/"  // Replace with your Replit URL
   ],
   "content_scripts": [
     {
@@ -31,6 +31,6 @@
     }
   },
   "icons": {
-    "16": "icons/icon.png",
+    "16": "icons/icon.png"
   }
 }

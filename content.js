@@ -78,7 +78,7 @@
     console.log('Scraped HTML:', html);
 
     // Send the HTML to the backend API
-    fetch('https://your-repl-url.repl.co/api/buttons', {  // Replace with your Replit URL
+    fetch('https://7907ebc7-588d-4842-997e-6ffd8a504f9b-00-2ztv2wnvxa3bt.kirk.replit.dev/api/buttons', {  // Replace with your Replit URL
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
