@@ -71,7 +71,6 @@
     container.style.width = getStyles(randomButton).match(/width:\s*[^;]+;/i)?.[0] || 'auto';
     container.style.height = getStyles(randomButton).match(/height:\s*[^;]+;/i)?.[0] || 'auto';
     container.style.display = 'inline-block';
-    container.style.border = '2px solid red';
     container.style.padding = '10px';
     container.style.margin = '10px';
 
@@ -87,7 +86,7 @@
 <head>
   <style>
     body { display: flex; flex-wrap: wrap; }
-    .container { border: 2px solid red; padding: 10px; margin: 10px; display: inline-block; }
+    .container {padding: 10px; margin: 10px; display: inline-block; }
   </style>
 </head>
 <body>
