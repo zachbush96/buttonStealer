@@ -1,9 +1,29 @@
-// content.js
-
 (function() {
   // Function to select all buttons
   function getAllButtons() {
-    return Array.from(document.querySelectorAll('button, input[type="button"], input[type="submit"]'));
+    return Array.from(document.querySelectorAll('button, input[type="button"], input[type="submit"]'))
+      .filter(isEligibleButton);  // Filter only eligible buttons
+  }
+
+  // Check if a button is visible, has text content, or contains images
+  function isEligibleButton(button) {
+    const rect = button.getBoundingClientRect();
+
+    // Check if the button is visible on the page
+    const isVisible = rect.width > 0 && rect.height > 0 &&
+                      rect.top >= 0 && rect.left >= 0 &&
+                      rect.bottom <= window.innerHeight && rect.right <= window.innerWidth &&
+                      button.style.display !== 'none' && button.style.visibility !== 'hidden' &&
+                      button.style.opacity !== '0';
+
+    // Check if button has non-whitespace text content
+    const hasTextContent = button.textContent.trim().length > 0;
+
+    // Check if button contains images (like <img> or <svg> elements)
+    const hasImageContent = button.querySelector('img') !== null || button.querySelector('svg') !== null;
+
+    // Filter the button only if it has visible content (either text or images)
+    return isVisible && (hasTextContent || hasImageContent);
   }
 
   // Function to get computed styles
